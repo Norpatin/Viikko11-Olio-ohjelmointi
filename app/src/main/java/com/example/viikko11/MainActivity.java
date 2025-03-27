@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*@Override
+    @Override
     protected void onResume() {
         super.onResume();
-        adapter.notifyDataSetChanged();
-    }/**/
+        contactListAdapter.notifyDataSetChanged();
+    }
 }
