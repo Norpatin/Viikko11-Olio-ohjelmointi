@@ -11,11 +11,10 @@
         android:id="@+id/AddContactActivityButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="28dp"
         android:onClick="SwitchToAddContactActivity"
         android:text="Add Contact"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintEnd_toStartOf="@+id/SortAlphabeticallyButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,30 +22,27 @@
         android:id="@+id/SortAlphabeticallyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
         android:text="Järjestä kirjaimen mukaan"
-        app:layout_constraintEnd_toEndOf="@+id/AddContactActivityButton"
-        app:layout_constraintStart_toStartOf="@+id/AddContactActivityButton"
-        app:layout_constraintTop_toBottomOf="@+id/AddContactActivityButton" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/SortByGroupButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="20dp"
         android:text="Järjestä työyhteistiedot ensin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/SortAlphabeticallyButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/SortAlphabeticallyButton"
-        app:layout_constraintTop_toBottomOf="@+id/SortAlphabeticallyButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SortAlphabeticallyButton" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/ListContactsRV"
-        android:layout_width="409dp"
-        android:layout_height="75dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+        android:layout_width="410dp"
+        android:layout_height="359dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="166dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

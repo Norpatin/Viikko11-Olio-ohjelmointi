@@ -18,6 +18,7 @@ public class ContactStorage {
     }
 
     public void addContact(Contact contact) {
+        contacts.add(contact);
 
     }
     public void removeContact(int puhNumber) {
