@@ -36,7 +36,7 @@ public class AddContactActivity extends AppCompatActivity {
 
     public void addContactButton(View view) {
         RadioGroup rgContactType = findViewById(R.id.ContactTypeRadioGroup);
-        //ContactStorage.getInstance().addContact(new Contact(firstname.getText().toString(),lastname.getText().toString(), puhNumber.getText().toString(), "personal"));
+        ContactStorage.getInstance().addContact(new Contact(firstname.getText().toString(),lastname.getText().toString(), puhNumber.getText().toString(), "personal"));
                 /*if(rgContactType == findViewById(R.id.PersonalRadioButton)){
                     ContactStorage.getInstance().addContact(new Contact(firstname.getText().toString(),lastname.getText().toString(), puhNumber.getText().toString(), "personal"));
                 }
