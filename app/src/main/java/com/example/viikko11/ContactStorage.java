@@ -6,7 +6,7 @@ public class ContactStorage {
     private ArrayList<Contact> contacts = new ArrayList<>();
     private static ContactStorage contactStorage = null;
 
-    private ContactStorage(){ //LISÄTTY
+    private ContactStorage(){
     }
 
 

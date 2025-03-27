@@ -7,6 +7,8 @@ public class Contact {
     private String contactGroup;
     private int Id;
 
+
+
     public Contact(String firstName, String surName, String number, String contactGroup) {
         this.firstName = firstName;
         this.lastName = surName;
@@ -39,4 +41,6 @@ public class Contact {
     public int getId() {
         return Id;
     }
+
+
 }

@@ -32,11 +32,15 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactViewHolder> 
         holder.contactPuhNumber.setText(contacts.get(position).getNumber());
         holder.contactGroup.setText(contacts.get(position).getContactGroup());
 
+        holder.imageViewDelete.setImageResource(R.drawable.delete);
+        holder.imageViewChange.setImageResource(R.drawable.showhide);
+
         holder.imageViewDelete.setOnClickListener(view -> {
             int pos = holder.getAdapterPosition();
             ContactStorage.getInstance().removeContact(contacts.get(pos).getId());
             notifyItemRemoved(pos);
         });
+
 
 
 
