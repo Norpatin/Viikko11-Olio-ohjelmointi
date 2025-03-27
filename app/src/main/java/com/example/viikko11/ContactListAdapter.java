@@ -2,6 +2,7 @@ package com.example.viikko11;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -30,6 +31,17 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactViewHolder> 
         holder.contactFullName.setText(contacts.get(position).getFullName());
         holder.contactPuhNumber.setText(contacts.get(position).getNumber());
         holder.contactGroup.setText(contacts.get(position).getContactGroup());
+
+        holder.imageViewDelete.setOnClickListener(view -> {
+            int pos = holder.getAdapterPosition();
+            ContactStorage.getInstance().removeContact(contacts.get(pos).getId());
+            notifyItemRemoved(pos);
+        });
+
+
+
+
+
 
     }
 

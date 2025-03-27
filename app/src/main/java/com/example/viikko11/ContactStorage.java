@@ -35,4 +35,5 @@ public class ContactStorage {
      }
      contacts.remove(i);
     }
+
 }

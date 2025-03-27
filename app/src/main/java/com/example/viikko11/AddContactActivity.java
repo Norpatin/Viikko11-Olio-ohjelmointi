@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +17,7 @@ public class AddContactActivity extends AppCompatActivity {
     private EditText lastname;
     private EditText firstname;
     private EditText puhNumber;
+
 
 
     @Override
@@ -32,6 +34,7 @@ public class AddContactActivity extends AppCompatActivity {
         lastname = findViewById(R.id.LastNameEdit);
         firstname = findViewById(R.id.FirstNameEdit);
         puhNumber = findViewById(R.id.PhoneNumberEdit);
+
     }
 
     public void addContactButton(View view) {

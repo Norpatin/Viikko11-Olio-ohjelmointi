@@ -5,6 +5,7 @@ public class Contact {
     private String lastName;
     private String number;
     private String contactGroup;
+    private int Id;
 
     public Contact(String firstName, String surName, String number, String contactGroup) {
         this.firstName = firstName;
@@ -35,4 +36,7 @@ public class Contact {
         return FullName;
     }
 
+    public int getId() {
+        return Id;
+    }
 }
