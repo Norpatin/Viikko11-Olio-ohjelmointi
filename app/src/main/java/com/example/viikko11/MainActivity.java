@@ -9,8 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
+    private ContactStorage contactStorage;
+    private RecyclerView recyclerView;
+
+    private ContactListAdapter adapter; //LISÄTTY
 
 
     @Override
@@ -23,10 +29,26 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        contactStorage = ContactStorage.getInstance();
+
+        recyclerView = findViewById(R.id.ListContactsRV);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new ContactListAdapter(this, contactStorage.getContacts());
+        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(new ContactListAdapter(getApplicationContext(), contactStorage.getContacts()));
+
+
     }
 
     public void SwitchToAddContactActivity(View view){
         Intent intent = new Intent(this, AddContactActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        adapter.notifyDataSetChanged();
     }
 }

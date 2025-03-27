@@ -20,4 +20,6 @@ public class ContactViewHolder extends RecyclerView.ViewHolder {
         contactPuhNumber = itemView.findViewById(R.id.ContactNumberText);
         contactGroup = itemView.findViewById(R.id.ContactGroupText);
     }
+
+
 }

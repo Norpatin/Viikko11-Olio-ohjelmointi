@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:ems="10"
+        android:hint="Last Name"
         android:inputType="text"
-        android:text="Last Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
+        android:hint="Phone number"
         android:inputType="text"
-        android:text="Phone number"
         app:layout_constraintEnd_toEndOf="@+id/LastNameEdit"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/LastNameEdit"
@@ -39,21 +39,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:ems="10"
+        android:hint="First name"
         android:inputType="text"
-        android:text="First name"
         app:layout_constraintEnd_toEndOf="@+id/PhoneNumberEdit"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/PhoneNumberEdit"
         app:layout_constraintTop_toBottomOf="@+id/PhoneNumberEdit" />
 
 
-
-
-
     <Button
         android:id="@+id/AddContactButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="addContactButton"
         android:text="Lisää yhteistieto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,5 +86,16 @@
             tools:layout_editor_absoluteY="460dp" />
 
     </RadioGroup>
+
+    <Button
+        android:id="@+id/GoToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="SwitchToMainActivity"
+        android:text="Palaa päävalikkoon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddContactButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
