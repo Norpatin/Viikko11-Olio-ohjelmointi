@@ -25,7 +25,7 @@ public class ContactStorage {
 
     }
     public void removeContact(int puhNumber) {
-     int i = 0;
+     /*int i = 0;
      String puhNumberString = String.valueOf(puhNumber);
      for(Contact r : contacts) {
          if(r.getNumber().equals(puhNumberString)){
@@ -33,7 +33,7 @@ public class ContactStorage {
          }
          i++;
      }
-     contacts.remove(i);
+     contacts.remove(i);/**/
     }
 
 }
