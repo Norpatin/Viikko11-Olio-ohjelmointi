@@ -12,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
     private ContactStorage contactStorage;
     private RecyclerView recyclerView;
@@ -44,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddContactActivity.class);
         startActivity(intent);
     }
+
+    //public void SortByFirsNameLetter(View view){
+        //Collection.sort()
+    //}
 
     @Override
     protected void onResume() {

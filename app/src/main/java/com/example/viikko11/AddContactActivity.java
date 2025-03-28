@@ -40,11 +40,12 @@ public class AddContactActivity extends AppCompatActivity {
     public void addContactButton(View view) {
         RadioGroup rgContactType = findViewById(R.id.ContactTypeRadioGroup);
         ContactStorage.getInstance().addContact(new Contact(firstname.getText().toString(),lastname.getText().toString(), puhNumber.getText().toString(), "personal"));
-                /*if(rgContactType == findViewById(R.id.PersonalRadioButton)){
-                    ContactStorage.getInstance().addContact(new Contact(firstname.getText().toString(),lastname.getText().toString(), puhNumber.getText().toString(), "personal"));
+        /*int testId = rgContactType.getCheckedRadioButtonId();
+                if(testId == R.id.PersonalRadioButton){
+                    ContactStorage.getInstance().addContact(new Contact(firstname.getText().toString(),lastname.getText().toString(), puhNumber.getText().toString(), "Henkilökohtainen"));
                 }
-                if(rgContactType == findViewById(R.id.WorkRadioButton)){
-                    ContactStorage.getInstance().addContact(new Contact(firstname.getText().toString(),lastname.getText().toString(), puhNumber.getText().toString(), "work"));
+                else if(testId == R.id.WorkRadioButton){
+                    ContactStorage.getInstance().addContact(new Contact(firstname.getText().toString(),lastname.getText().toString(), puhNumber.getText().toString(), "Työt"));
                 }/**/
     }
 
