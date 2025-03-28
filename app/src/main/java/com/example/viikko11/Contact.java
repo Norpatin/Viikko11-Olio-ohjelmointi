@@ -5,7 +5,7 @@ public class Contact {
     private String lastName;
     private String number;
     private String contactGroup;
-    private int Id;
+    private int id;
 
 
 
@@ -39,7 +39,7 @@ public class Contact {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
 

@@ -23,17 +23,26 @@ public class ContactStorage {
     public void addContact(Contact contact) {
         contacts.add(contact);
 
+
+
     }
-    public void removeContact(int puhNumber) {
-     /*int i = 0;
-     String puhNumberString = String.valueOf(puhNumber);
+
+    public Contact getContactById(int id) {
+        return contacts.remove(id);
+    }
+
+    public void removeContact(int id) {
+     int i = 0;
+     String idString = String.valueOf(id);
      for(Contact r : contacts) {
-         if(r.getNumber().equals(puhNumberString)){
+         int test = r.getId();
+         String testString = String.valueOf(test);
+         if(testString.equals(idString)){
              break;
          }
          i++;
      }
-     contacts.remove(i);/**/
+     contacts.remove(i);
     }
 
 }
